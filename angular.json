@@ -55,8 +55,10 @@
             ],
             "scripts": []
           },
+ 
           "configurations": {
             "production": {
+              "tsConfig": "projects/core/tsconfig.lib.prod.json",
               "budgets": [
                 {
                   "type": "initial",
@@ -76,6 +78,7 @@
                 }
               ],
               "outputHashing": "all"
+              
             },
             "development": {
               "buildOptimizer": false,
