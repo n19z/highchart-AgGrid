@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
 import { ColDef } from 'ag-grid-community';
+import { Observable } from 'rxjs';
+import { DataService } from '../services/data.service';
 
 
 @Component({
@@ -9,7 +11,7 @@ import { ColDef } from 'ag-grid-community';
 })
 export class AgGridComponent {
 
-
+ 
   columnDefs: ColDef[] = [
     { headerName: 'ID', field: 'id' },
     { headerName: 'Имя', field: 'first_name' },
@@ -23,9 +25,15 @@ export class AgGridComponent {
     resizable: true
   }
 
-  rowData = [{ id: 1, first_name: 'Нияз', last_name:'Иванов', email:"dcd@gmail.com", gender:'мужской', adult: false}]
-  constructor() { }
+  rowData: Observable<any[]> 
 
+
+  constructor(public data: DataService) {
+    this.rowData = this.data.getAgGridData()
+ }
 
 
 }
+
+
+

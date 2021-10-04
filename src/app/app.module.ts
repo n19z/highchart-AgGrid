@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
 import { FormsModule } from '@angular/forms'
 
+import { HttpClientModule } from '@angular/common/http'
 import { HighchartsChartModule } from 'highcharts-angular'
 import { HighchartComponent } from './highchart/highchart.component'
 
-
+import { DataService } from './services/data.service'
 import { AppComponent } from './app.component'
 
 import { AgGridModule } from 'ag-grid-angular'
@@ -18,19 +19,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
-    HighchartComponent,
-    AgGridComponent
-    
+    AgGridComponent,
+    HighchartComponent
   ],
   imports: [
     BrowserModule,  
     AgGridModule.withComponents([]),
+    HttpClientModule,
     HighchartsChartModule,
     MatTabsModule,
     BrowserAnimationsModule,
     FormsModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 
 })

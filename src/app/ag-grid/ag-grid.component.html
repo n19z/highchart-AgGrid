@@ -1,8 +1,13 @@
 <div class="wrap">
-    <ag-grid-angular style="width: 80%; height:500px; margin: 0 auto;" 
-        class="ag-theme-alpine"
-        [rowData]="rowData" 
-        [columnDefs]="columnDefs" 
-        [defaultColDef]="defaultColDef">
-    </ag-grid-angular>
+    <ag-grid-angular 
+    style="width: 80%; height:500px; margin: 0 auto;"
+    class="ag-theme-alpine"
+    [rowData]="rowData | async"
+    [columnDefs]="columnDefs"
+    [defaultColDef]="defaultColDef"
+    
+>
+</ag-grid-angular>
+
 </div>
+
