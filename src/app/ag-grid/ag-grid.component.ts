@@ -1,7 +1,7 @@
 import { Component } from '@angular/core'
-import { ColDef } from 'ag-grid-community';
+import { ColDef, Grid } from 'ag-grid-community';
 import { Observable } from 'rxjs';
-import { DataService } from '../services/data.service';
+import { DataGridService } from '../services/data-grid.service';
 
 
 @Component({
@@ -28,7 +28,7 @@ export class AgGridComponent {
   rowData: Observable<any[]> 
 
 
-  constructor(public data: DataService) {
+  constructor(public data: DataGridService) {
     this.rowData = this.data.getAgGridData()
  }
 

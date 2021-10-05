@@ -6,7 +6,6 @@ import { HttpClientModule } from '@angular/common/http'
 import { HighchartsChartModule } from 'highcharts-angular'
 import { HighchartComponent } from './highchart/highchart.component'
 
-import { DataService } from './services/data.service'
 import { AppComponent } from './app.component'
 
 import { AgGridModule } from 'ag-grid-angular'
@@ -31,7 +30,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     FormsModule
   ],
-  providers: [DataService],
+  providers: [],
   bootstrap: [AppComponent]
 
 })
