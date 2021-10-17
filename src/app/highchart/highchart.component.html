@@ -1,11 +1,8 @@
 <highcharts-chart 
-    *ngIf="chartOptions; else load"
     class="chart"
     [Highcharts]="Highcharts" 
     [options]="chartOptions"
->
+    [(update)]="updateFlag"
+    >
 </highcharts-chart>
 
-<ng-template #load class="description">
-    Данные загружаются
-</ng-template>

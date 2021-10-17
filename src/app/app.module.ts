@@ -22,7 +22,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HighchartComponent
   ],
   imports: [
-    BrowserModule,  
+    BrowserModule,
     AgGridModule.withComponents([]),
     HttpClientModule,
     HighchartsChartModule,

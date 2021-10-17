@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DataGridService {
   getAgGridData() {
-    return this.http.get<any[]>('https://api.mockaroo.com/api/0744f310?count=15&key=e8844b40')
+    return this.http.get<[]>('https://api.mockaroo.com/api/0744f310?count=15&key=e8844b40')
   }
   constructor(private http: HttpClient) { }
 }
